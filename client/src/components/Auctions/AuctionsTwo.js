@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 const initData = {
-    pre_heading: "Auctions",
-    heading: "Live Auctions",
+    pre_heading: "Latest Products",
+    //heading: "Latest Products",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.",
     btnText: "Load More"
 }
@@ -10,47 +10,47 @@ const initData = {
 const data = [
     {
         id: "1",
-        img: "/img/auction_1.jpg",
+        img: "/img/oven.png",
         date: "2021-12-09",
-        title: "Virtual Worlds",
+        title: "Chips displayer",
         seller_thumb: "/img/avatar_1.jpg",
-        seller: "@Richard",
-        price: "1.5 BNB",
+        seller: "@Kinuthia",
+        price: "Ksh 10,000",
         count: "1 of 1"
     },
     {
         id: "2",
-        img: "/img/auction_2.jpg",
-        date: "2021-10-05",
-        title: "Collectibles",
+        img: "/img/chips.png",
+        date: "2022-10-12",
+        title: "Chips cutter",
         seller_thumb: "/img/avatar_2.jpg",
-        seller: "@JohnDeo",
-        price: "2.7 BNB",
+        seller: "@Gideon",
+        price: "Ksh 7,000",
         count: "1 of 1"
     },
     {
         id: "3",
-        img: "/img/auction_3.jpg",
+        img: "/img/jiko.png",
         date: "2021-09-15",
-        title: "Arts",
+        title: "Cooker",
         seller_thumb: "/img/avatar_3.jpg",
-        seller: "@MKHblots",
-        price: "2.3 BNB",
+        seller: "@Motweri",
+        price: "Ksh 20,000",
         count: "1 of 1"
     },
     {
         id: "4",
-        img: "/img/auction_4.jpg",
+        img: "/img/Riko.png",
         date: "2021-12-29",
-        title: "Robotic Arts",
+        title: "Tandoori oven",
         seller_thumb: "/img/avatar_4.jpg",
-        seller: "@RioArham",
-        price: "1.8 BNB",
+        seller: "@Duncan",
+        price: "Ksh 6,500",
         count: "1 of 1"
     },
     {
         id: "5",
-        img: "/img/auction_5.jpg",
+        img: "/img/sufuria.jpg",
         date: "2022-01-24",
         title: "Magazine Fall",
         seller_thumb: "/img/avatar_5.jpg",
@@ -60,7 +60,7 @@ const data = [
     },
     {
         id: "6",
-        img: "/img/auction_6.jpg",
+        img: "/img/meat.jpeg",
         date: "2022-03-30",
         title: "Inspiration",
         seller_thumb: "/img/avatar_6.jpg",
