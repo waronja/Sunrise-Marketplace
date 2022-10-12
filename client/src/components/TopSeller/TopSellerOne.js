@@ -21,7 +21,7 @@ class TopSeller extends Component {
     }
     render() {
         return (
-            <section className="top-seller-area p-0">
+            <section className="top-seller-area">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">

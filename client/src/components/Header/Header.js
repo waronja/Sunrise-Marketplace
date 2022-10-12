@@ -8,7 +8,7 @@ const Header = () => {
                 <div className="container header">
                     {/* Navbar Brand*/}
                     <a className="navbar-brand" href="/">
-                        <img className="navbar-brand-sticky" src="img/tp logo.png" alt="sticky brand-logo" />
+                        <img className="navbar-brand-sticky" src="img/tp logo.png"  alt="sticky brand-logo" />
                     </a>
                     <div className="ml-auto" />
                     
@@ -19,7 +19,7 @@ const Header = () => {
                         </li>
                     </ul>
                     <ul className="navbar-nav action">
-                        <li className="nav-item ml-3">
+                        <li className="nav-item ml-4">
                             <a href="/signup" className="btn ml-lg-auto btn-bordered-white"> Sign Up</a>
                         </li>
                     </ul>

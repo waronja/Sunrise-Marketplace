@@ -108,6 +108,7 @@ class AuctionsOne extends Component {
                                             <div className="card">
                                                 <div className="image-over">
                                                     <a href="/item-details">
+                                                        {/* <img className="card-img-top" src={item.img} alt="" /> */}
                                                         <img className="card-img-top" src={item.img} alt="" />
                                                     </a>
                                                 </div>
