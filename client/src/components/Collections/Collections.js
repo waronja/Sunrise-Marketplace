@@ -1,77 +1,103 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 
-const BASE_URL = "https://my-json-server.typicode.com/themeland/netstorm-json/collections";
+const initData = {
+    pre_heading: "Login",
+    heading: "Login to your Account",
+}
 
-class Collections extends Component {
-    state = {
-        data: {},
-        collectionData: []
+const socialData = [
+    {
+        id: "1",
+        link: "facebook",
+        icon: "fab fa-facebook-f"
+    },
+    {
+        id: "2",
+        link: "twitter",
+        icon: "fab fa-twitter"
+    },
+    {
+        id: "3",
+        link: "google-plus",
+        icon: "fab fa-google-plus-g"
     }
-    componentDidMount(){
-        axios.get(`${BASE_URL}`)
-            .then(res => {
-                this.setState({
-                    data: res.data,
-                    collectionData: res.data.collectionData
-                })
-                // console.log(this.state.data)
-            })
-        .catch(err => console.log(err))
-    }
-    render() {
+]
+
+function Login({ onLogin }) {
+    const [showLogin, setShowLogin] = useState(true);
+
+// class Login extends Component {
+//     state = {
+//         initData: {},
+//         data: []
+//     }
+    // componentDidMount(){
+    //     this.setState({
+    //         initData: initData,
+    //         data: socialData
+    //     })
+    // }
+    // return() {
         return (
-            <section className="popular-collections-area">
+            <section className="author-area">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-12">
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-md-8 col-lg-7">
                             {/* Intro */}
-                            <div className="intro d-flex justify-content-between align-items-end m-0">
-                                <div className="intro-content">
-                                    <span>{this.state.data.preHeading}</span>
-                                    <h3 className="mt-3 mb-0">{this.state.data.heading}</h3>
-                                </div>
-                                <div className="intro-btn">
-                                    <a className="btn content-btn text-left" href="/explore-2">{this.state.data.btnText}</a>
-                                </div>
+                            <div className="intro text-center">
+                                {/* <span>{this.state.initData.pre_heading}</span> */}
+                                {/* <h3 className="mt-3 mb-0">{this.state.initData.heading}</h3> */}
+                                {/* <p>{this.state.initData.content}</p> */}
                             </div>
-                        </div>
-                    </div>
-                    <div className="row items">
-                        {this.state.collectionData.map((item, idx) => {
-                            return (
-                                <div key={`cd_${idx}`} className="col-12 col-sm-6 col-lg-3 item">
-                                    <div className="card no-hover text-center">
-                                        <div className="image-over">
-                                            <a href="/item-details">
-                                                <img className="card-img-top" src={item.img} alt="" />
-                                            </a>
-                                            {/* Seller */}
-                                            <a className="seller" href="/item-details">
-                                                <div className="seller-thumb avatar-lg">
-                                                    <img className="rounded-circle" src={item.avatar} alt="" />
-                                                </div>
-                                            </a>
+                            {/* Item Form */}
+                            <form className="item-form card no-hover">
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="form-group mt-3">
+                                            <input type="email" className="form-control" name="email" placeholder="Enter your Email" required="required" />
                                         </div>
-                                        {/* Card Caption */}
-                                        <div className="card-caption col-12 p-0">
-                                            {/* Card Body */}
-                                            <div className="card-body mt-4">
-                                                <a href="/item-details">
-                                                    <h5 className="mb-2">{item.title}</h5>
-                                                </a>
-                                                <span>{item.content}</span>
+                                    </div>
+                                    <div className="col-12">
+                                        <div className="form-group mt-3">
+                                            <input type="password" className="form-control" name="password" placeholder="Enter your Password" required="required" />
+                                        </div>
+                                    </div>
+                                    <div className="col-12">
+                                        <div className="form-group mt-3">
+                                            <div className="form-check form-check-inline">
+                                                <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" defaultValue="option1" defaultChecked />
+                                                <label className="form-check-label" htmlFor="inlineRadio1">Remember Me</label>
                                             </div>
                                         </div>
                                     </div>
+                                    <div className="col-12">
+                                        <button className="btn w-100 mt-3 mt-sm-4" type="submit">Sign In</button>
+                                    </div>
+                                    <div className="col-12">
+                                        <hr />
+                                        <div className="other-option">
+                                            <span className="d-block text-center mb-4">Or</span>
+                                            {/* Social Icons */}
+                                            {/* <div className="social-icons d-flex justify-content-center">
+                                                {this.state.data.map((item, idx) => {
+                                                    return (
+                                                        <a key={`lsd_${idx}`} className={item.link} href="#">
+                                                            <i className={item.icon} />
+                                                            <i className={item.icon} />
+                                                        </a>
+                                                    );
+                                                })}
+                                            </div> */}
+                                        </div>
+                                    </div>
                                 </div>
-                            );
-                        })}
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
         );
     }
-}
+// }
 
-export default Collections;
+export default Login;
