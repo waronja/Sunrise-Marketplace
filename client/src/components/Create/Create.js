@@ -47,17 +47,17 @@ class Create extends Component {
                                     </div>
                                     <div className="col-12 col-md-6">
                                         <div className="form-group">
-                                            <input type="text" className="form-control" name="royality" placeholder="Royality" required="required" />
+                                            <input type="text" className="form-control" name="category" placeholder="category" required="required" />
                                         </div>
                                     </div>
                                     <div className="col-12 col-md-6">
                                         <div className="form-group">
-                                            <input type="text" className="form-control" placeholder="Size" required="required" />
+                                            <input type="text" className="form-control" placeholder="Dimensions" required="required" />
                                         </div>
                                     </div>
                                     <div className="col-12 col-md-6">
                                         <div className="form-group">
-                                            <input type="text" className="form-control" name="copies" placeholder="No of Copies" required="required" />
+                                            <input type="text" className="form-control" placeholder="No of Items" required="required" />
                                         </div>
                                     </div>
                                     <div className="col-12">
@@ -77,7 +77,7 @@ class Create extends Component {
                                         </div>
                                     </div>
                                     <div className="col-12">
-                                        <button className="btn w-100 mt-3 mt-sm-4" type="submit">Create Item</button>
+                                        <button className="btn w-100 mt-3 mt-sm-4" type="submit">Add Item</button>
                                     </div>
                                 </div>
                             </form>
