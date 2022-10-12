@@ -1,0 +1,16 @@
+models
+  Item:
+        name:string
+        description:text
+        price:float/integer
+        dimensions:string
+        Category_id
+
+    Category:
+        name
+
+
+ users:
+      username:string
+      password:string
+      

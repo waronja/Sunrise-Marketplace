@@ -8,7 +8,10 @@ function App() {
     <div>
       <MyRouts />
     </div>
+<<<<<<< HEAD
     
+=======
+>>>>>>> 22bb261732d720dc30dcb4dba9228a0f7bd83fcf
   );
 }
 
