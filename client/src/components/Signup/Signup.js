@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 const initData = {
     pre_heading: "Signup",
@@ -6,36 +6,44 @@ const initData = {
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit."
 }
 
-const socialData = [
-    {
-        id: "1",
-        link: "facebook",
-        icon: "fab fa-facebook-f"
-    },
-    {
-        id: "2",
-        link: "twitter",
-        icon: "fab fa-twitter"
-    },
-    {
-        id: "3",
-        link: "google-plus",
-        icon: "fab fa-google-plus-g"
-    }
-]
+// const socialData = [
+//     {
+//         id: "1",
+//         link: "facebook",
+//         icon: "fab fa-facebook-f"
+//     },
+//     {
+//         id: "2",
+//         link: "twitter",
+//         icon: "fab fa-twitter"
+//     },
+//     {
+//         id: "3",
+//         link: "google-plus",
+//         icon: "fab fa-google-plus-g"
+//     }
+// ]
 
-class Signup extends Component {
-    state = {
-        initData: {},
-        data: []
-    }
-    componentDidMount(){
-        this.setState({
-            initData: initData,
-            data: socialData
-        })
-    }
-    render() {
+// class Signup extends Component {
+//     state = {
+//         initData: {},
+//         data: []
+//     }
+//     componentDidMount(){
+//         this.setState({
+//             initData: initData,
+//             data: socialData
+//         })
+//     }
+function Signup({ onLogin }) {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [passwordConfirmation, setPasswordConfirmation] = useState("");
+    const [imageUrl, setImageUrl] = useState("");
+    const [bio, setBio] = useState("");
+    const [errors, setErrors] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    // render() {
         return (
             <section className="author-area">
                 <div className="container">
@@ -43,9 +51,9 @@ class Signup extends Component {
                         <div className="col-12 col-md-8 col-lg-7">
                             {/* Intro */}
                             <div className="intro text-center">
-                                <span>{this.state.initData.pre_heading}</span>
+                                {/* <span>{this.state.initData.pre_heading}</span>
                                 <h3 className="mt-3 mb-0">{this.state.initData.heading}</h3>
-                                <p>{this.state.initData.content}</p>
+                                <p>{this.state.initData.content}</p> */}
                             </div>
                             {/* Item Form */}
                             <form className="item-form card no-hover">
@@ -84,7 +92,7 @@ class Signup extends Component {
                                         <div className="other-option">
                                             <span className="d-block text-center mb-4">Or</span>
                                             {/* Social Icons */}
-                                            <div className="social-icons d-flex justify-content-center">
+                                            {/* <div className="social-icons d-flex justify-content-center">
                                                 {this.state.data.map((item, idx) => {
                                                     return (
                                                         <a key={`lsd_${idx}`} className={item.link} href="#">
@@ -93,7 +101,7 @@ class Signup extends Component {
                                                         </a>
                                                     );
                                                 })}
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
@@ -104,6 +112,6 @@ class Signup extends Component {
             </section>
         );
     }
-}
+
 
 export default Signup;
