@@ -15,12 +15,12 @@ const Header = () => {
                     {/* Navbar Action Button */}
                     <ul className="navbar-nav action">
                         <li className="nav-item ml-3">
-                            <a href="/login" className="btn ml-lg-auto btn-bordered-white"><i className="icon-wallet mr-md-2" />Login</a>
+                            <a href="/login" className="btn ml-lg-auto btn-bordered-white"> Login</a>
                         </li>
                     </ul>
                     <ul className="navbar-nav action">
                         <li className="nav-item ml-3">
-                            <a href="/signup" className="btn ml-lg-auto btn-bordered-white"><i className="icon-wallet mr-md-2" />Sign Up</a>
+                            <a href="/signup" className="btn ml-lg-auto btn-bordered-white"> Sign Up</a>
                         </li>
                     </ul>
                 </div>
