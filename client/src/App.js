@@ -7,7 +7,6 @@ function App() {
   return (
     <div>
       <MyRouts />
-      <div>Hello</div>
     </div>
     
   );
