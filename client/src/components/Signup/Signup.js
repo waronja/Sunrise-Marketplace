@@ -1,81 +1,57 @@
 import React, { useState } from 'react';
 
-const initData = {
-    pre_heading: "Signup",
-    heading: "Create an Account",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit."
-}
-
-const socialData = [
-    {
-        id: "1",
-        link: "facebook",
-        icon: "fab fa-facebook-f"
-    },
-    {
-        id: "2",
-        link: "twitter",
-        icon: "fab fa-twitter"
-    },
-    {
-        id: "3",
-        link: "google-plus",
-        icon: "fab fa-google-plus-g"
-    }
-]
-
-
-// class Signup extends Component {
     function Signup () {
-        const [initData, setInitData] = useState("")
-        const [SocialData, setSocialData] = useState([])
-    // }
-    // state = {
-    //     initData: {},
-    //     data: []
-    // }
-    // componentDidMount(){
-    //     this.setState({
-    //         initData: initData,
-    //         data: socialData
-    //     })
-    // }
-    // render() {
+        const [username, setUsername] = useState("");
+        const [email, setEmail] = useState("")
+        const [password, setPassword] = useState("");
+        const [passwordConfirmation, setPasswordConfirmation] = useState("");
+        
+        function handleSubmit(e) {
+            e.preventDefault();
+            fetch("/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    username,
+                    email,
+                    password,
+                    password_confirmation: passwordConfirmation,
+      }),
+    }).then((res) => res.json()).then((data) => console.log(data))
+  }
+        
+        
         return (
             <section className="author-area">
                 <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-12 col-md-8 col-lg-7">
-                            {/* Intro */}
                             <div className="intro text-center">
                                 <h5>Sign Up</h5>
-                                {/* <span>{this.state.initData.pre_heading}</span> */}
-                                {/* <h3 className="mt-3 mb-0">{this.state.initData.heading}</h3> */}
-                                {/* <p>{this.state.initData.content}</p> */}
-                            </div>
-                            {/* Item Form */}
-                            <form className="item-form card no-hover">
+                            <form className="item-form card no-hover" onSubmit={handleSubmit}>
                                 <div className="row">
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="text" className="form-control" name="name" placeholder="Enter your Name" required="required" />
+                                            <input type="text" className="form-control" name="name" autoComplete="off" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Enter your Name" required="required" />
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="email" className="form-control" name="email" placeholder="Enter your Email" required="required" />
+                                            <input type="email" className="form-control" name="email" value={email} onChange={(e) => setEmail (e.target.value)} placeholder="Enter your Email" required="required" />
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="password" className="form-control" name="password" placeholder="Enter your Password" required="required" />
+                                            <input type="password" className="form-control" name="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your Password" required="required" />
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="password" className="form-control" name="password_confirmation" placeholder="Enter your Password" required="required" />
+                                            <input type="password" className="form-control" name="password_confirmation" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}placeholder="Enter your Password" required="required" />
                                         </div>
                                     </div>
+
                                     <div className="col-12">
                                         <div className="form-group mt-3">
                                             <div className="form-check form-check-inline">
@@ -92,20 +68,6 @@ const socialData = [
                                     </div>
                                     <div className="col-12">
                                         <hr />
-                                        <div className="other-option">
-                                            <span className="d-block text-center mb-4">Or</span>
-                                            {/* Social Icons */}
-                                            {/* <div className="social-icons d-flex justify-content-center">
-                                                {this.state.data.map((item, idx) => {
-                                                    return (
-                                                        <a key={`lsd_${idx}`} className={item.link} href="#">
-                                                            <i className={item.icon} />
-                                                            <i className={item.icon} />
-                                                        </a>
-                                                    );
-                                                })}
-                                            </div> */}
-                                        </div>
                                     </div>
                                 </div>
                             </form>
@@ -115,6 +77,6 @@ const socialData = [
             </section>
         );
     }
-// }
+
 
 export default Signup;
