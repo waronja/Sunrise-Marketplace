@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 const initData = {
     pre_heading: "Signup",
@@ -24,18 +24,23 @@ const socialData = [
     }
 ]
 
-class Signup extends Component {
-    state = {
-        initData: {},
-        data: []
-    }
-    componentDidMount(){
-        this.setState({
-            initData: initData,
-            data: socialData
-        })
-    }
-    render() {
+
+// class Signup extends Component {
+    function Signup () {
+        const [initData, setInitData] = useState("")
+        const [SocialData, setSocialData] = useState([])
+    // }
+    // state = {
+    //     initData: {},
+    //     data: []
+    // }
+    // componentDidMount(){
+    //     this.setState({
+    //         initData: initData,
+    //         data: socialData
+    //     })
+    // }
+    // render() {
         return (
             <section className="author-area">
                 <div className="container">
@@ -43,9 +48,10 @@ class Signup extends Component {
                         <div className="col-12 col-md-8 col-lg-7">
                             {/* Intro */}
                             <div className="intro text-center">
-                                <span>{this.state.initData.pre_heading}</span>
-                                <h3 className="mt-3 mb-0">{this.state.initData.heading}</h3>
-                                <p>{this.state.initData.content}</p>
+                                <h5>Sign Up</h5>
+                                {/* <span>{this.state.initData.pre_heading}</span> */}
+                                {/* <h3 className="mt-3 mb-0">{this.state.initData.heading}</h3> */}
+                                {/* <p>{this.state.initData.content}</p> */}
                             </div>
                             {/* Item Form */}
                             <form className="item-form card no-hover">
@@ -67,6 +73,11 @@ class Signup extends Component {
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group mt-3">
+                                            <input type="password" className="form-control" name="password_confirmation" placeholder="Enter your Password" required="required" />
+                                        </div>
+                                    </div>
+                                    <div className="col-12">
+                                        <div className="form-group mt-3">
                                             <div className="form-check form-check-inline">
                                                 <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" defaultValue="option1" />
                                                 <label className="form-check-label" htmlFor="inlineRadio1">I agree to <a href="#">Privacy Policy</a></label>
@@ -84,7 +95,7 @@ class Signup extends Component {
                                         <div className="other-option">
                                             <span className="d-block text-center mb-4">Or</span>
                                             {/* Social Icons */}
-                                            <div className="social-icons d-flex justify-content-center">
+                                            {/* <div className="social-icons d-flex justify-content-center">
                                                 {this.state.data.map((item, idx) => {
                                                     return (
                                                         <a key={`lsd_${idx}`} className={item.link} href="#">
@@ -93,7 +104,7 @@ class Signup extends Component {
                                                         </a>
                                                     );
                                                 })}
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
@@ -104,6 +115,6 @@ class Signup extends Component {
             </section>
         );
     }
-}
+// }
 
 export default Signup;
