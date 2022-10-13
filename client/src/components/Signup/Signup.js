@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import ServerSideErrors from '../Create/ServerSideErrors';
+import { useHistory } from 'react-router-dom'; 
 
     function Signup () {
+        let history = useHistory ();
         const[isServerSideError, setIsServerSideError] = useState(false)
         const[error, setError] = useState([])
         const[formData, setFormData] = useState({
@@ -33,6 +35,7 @@ import ServerSideErrors from '../Create/ServerSideErrors';
                 if(data['status']==="failed"){
                     setIsServerSideError(true)
                     setError(data['data'])
+                    history.push('/login')
                 }else{
                     setIsServerSideError(false)
                     setError([])
