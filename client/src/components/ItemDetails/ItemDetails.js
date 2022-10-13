@@ -3,22 +3,22 @@ import React, { Component } from 'react';
 const initData = {
     itemImg: "/img/auction_2.jpg",
     date: "2022-03-30",
-    tab_1: "Bids",
-    tab_2: "History",
-    tab_3: "Details",
+    // tab_1: "Bids",
+    // tab_2: "History",
+    // tab_3: "Details",
     ownerImg: "/img/avatar_1.jpg",
     itemOwner: "Themeland",
     created: "15 Jul 2021",
     title: "Walking On Air",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.",
-    price_1: "1.5 ETH",
+    // price_1: "1.5 ETH",
     price_2: "$500.89",
     count: "1 of 5",
     size: "14000 x 14000 px",
     volume: "64.1",
-    highest_bid: "2.9 BNB",
-    bid_count: "1 of 5",
-    btnText: "View Details"
+    // highest_bid: "2.9 BNB",
+    // bid_count: "1 of 5",
+    btnText: "Contact Seller"
 }
 
 const tabData_1 = [
@@ -69,20 +69,20 @@ const tabData_2 = [
     }
 ]
 
-const sellerData = [
-    {
-        id: "1",
-        img: "/img/avatar_1.jpg",
-        seller: "@ArtNoxStudio",
-        post: "Creator"
-    },
-    {
-        id: "2",
-        img: "/img/avatar_2.jpg",
-        seller: "Virtual Worlds",
-        post: "Collection"
-    }
-]
+// const sellerData = [
+//     {
+//         id: "1",
+//         img: "/img/avatar_1.jpg",
+//         seller: "@ArtNoxStudio",
+//         post: "Creator"
+//     },
+//     {
+//         id: "2",
+//         img: "/img/avatar_2.jpg",
+//         seller: "Virtual Worlds",
+//         post: "Collection"
+//     }
+// ]
 
 class ItemDetails extends Component {
     state = {
@@ -96,7 +96,7 @@ class ItemDetails extends Component {
             initData: initData,
             tabData_1: tabData_1,
             tabData_2: tabData_2,
-            sellerData: sellerData
+            // sellerData: sellerData
         })
     }
     render() {
@@ -135,14 +135,14 @@ class ItemDetails extends Component {
                                     <div className="tab-pane fade show active" id="nav-home">
                                         <ul className="list-unstyled">
                                             {/* Single Tab List */}
-                                            {this.state.tabData_1.map((item, idx) => {
+                                            {/* {this.state.tabData_1.map((item, idx) => {
                                                 return (
                                                     <li key={`tdo_${idx}`} className="single-tab-list d-flex align-items-center">
                                                         <img className="avatar-sm rounded-circle mr-3" src={item.img} alt="" />
                                                         <p className="m-0">Bid listed for <strong>{item.price}</strong> {item.time} <br />by <a href="/author">{item.author}</a></p>
                                                     </li>
                                                 );
-                                            })}
+                                            })} */}
                                         </ul>
                                     </div>
                                     <div className="tab-pane fade" id="nav-profile">
@@ -224,7 +224,7 @@ class ItemDetails extends Component {
                                     })}
                                     <div className="col-12 item px-lg-2">
                                         <div className="card no-hover">
-                                            <h4 className="mt-0 mb-2">Highest Bid</h4>
+                                            {/* <h4 className="mt-0 mb-2">Highest Bid</h4> */}
                                             <div className="price d-flex justify-content-between align-items-center">
                                                 <span>{this.state.initData.highest_bid}</span>
                                                 <span>{this.state.initData.bid_count}</span>

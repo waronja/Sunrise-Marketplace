@@ -39,13 +39,13 @@ class AuthorProfile extends Component {
                         <h5 className="mb-3">{this.state.data.author}</h5>
                         <p className="my-3">{this.state.data.content}</p>
                         <div className="input-group">
-                            <input type="text" className="form-control" placeholder={this.state.data.authorId} />
+                            {/* <input type="text" className="form-control" placeholder={this.state.data.authorId} /> */}
                             <div className="input-group-append">
                                 <button><i className="icon-docs" /></button>
                             </div>
                         </div>
                         {/* Social Icons */}
-                        <div className="social-icons d-flex justify-content-center my-3">
+                        {/* <div className="social-icons d-flex justify-content-center my-3">
                             {this.state.socialData.map((item, idx) => {
                                 return (
                                     <a key={`asd_${idx}`} className={item.link} href="#">
@@ -54,7 +54,7 @@ class AuthorProfile extends Component {
                                     </a>
                                 );
                             })}
-                        </div>
+                        </div> */}
                         <a className="btn btn-bordered-white btn-smaller" href="#">{this.state.data.btnText}</a>
                     </div>
                 </div>
