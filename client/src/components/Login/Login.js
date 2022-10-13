@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import ServerSideErrors from '../Create/ServerSideErrors';
 
-function Login (onLogin) {
+function Login () {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [isServerSideError, setIsServerSideError] = useState(false)
+    const [error, setError] = useState([])
+
     
     function handleSubmit(e) {
         e.preventDefault();
@@ -12,13 +16,16 @@ function Login (onLogin) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({ email, password }),
-        }).then((r) => {
-            if (r.ok) {
-                r.json().then((user) => onLogin(user));
-            } else {
-                r.json().then((data) => console.log(data));
+        }).then((res) => res.json())
+        .then((data)=>{
+            if(data['status']==="failed"){
+                setIsServerSideError(true)
+                setError(data['data'])
+            }else{
+                setIsServerSideError(false)
+                setError([])
             }
-        });
+        })
     }
 
         return (
@@ -29,6 +36,7 @@ function Login (onLogin) {
                             <h5>Login</h5>
                             <form className="item-form card no-hover" onSubmit={handleSubmit}>
                                 <div className="row">
+                                {isServerSideError && <ServerSideErrors errors={error}/>}
                                     <div className="col-12">
                                         <div className="form-group mt-3">
                                             <input type="email" className="form-control" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your Email" required="required" />
