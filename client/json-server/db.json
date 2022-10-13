@@ -146,7 +146,7 @@
                 "owner": "Richard",
                 "price": "1.5 ETH",
                 "count": "1 of 1",
-                "btnText": "Place a Bid"
+                "btnText": "View Details",
             },
             {
                 "id": 2,
@@ -155,7 +155,7 @@
                 "owner": "John Deo",
                 "price": "2.7 ETH",
                 "count": "1 of 1",
-                "btnText": "Place a Bid"
+                "btnText": "View Details"
             },
             {
                 "id": 3,
@@ -164,7 +164,7 @@
                 "owner": "Arham",
                 "price": "2.3 ETH",
                 "count": "1 of 1",
-                "btnText": "Place a Bid"
+                "btnText": "View Details"
             },
             {
                 "id": 4,
@@ -173,7 +173,7 @@
                 "owner": "Yasmin",
                 "price": "1.8 ETH",
                 "count": "1 of 1",
-                "btnText": "Place a Bid"
+                "btnText": "View Details"
             },
             {
                 "id": 5,
@@ -182,7 +182,7 @@
                 "owner": "Junaid",
                 "price": "1.7 ETH",
                 "count": "1 of 1",
-                "btnText": "Place a Bid"
+                "btnText": "View Details"
             },
             {
                 "id": 6,
@@ -191,7 +191,7 @@
                 "owner": "ArtNox",
                 "price": "1.9 ETH",
                 "count": "1 of 1",
-                "btnText": "Place a Bid"
+                "btnText": "View Details"
             },
             {
                 "id": 7,
@@ -200,7 +200,7 @@
                 "owner": "Junaid",
                 "price": "3.2 ETH",
                 "count": "1 of 1",
-                "btnText": "Place a Bid"
+                "btnText": "View Details"
             },
             {
                 "id": 8,
@@ -209,7 +209,7 @@
                 "owner": "Johnson",
                 "price": "0.69 ETH",
                 "count": "1 of 1",
-                "btnText": "Place a Bid"
+                "btnText": "View Details"
             }
         ]
     },

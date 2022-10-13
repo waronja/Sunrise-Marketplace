@@ -14,7 +14,7 @@ const data = [
         owner: "Richard",
         price: "1.5 ETH",
         count: "1 of 1",
-        btnText: "Place a Bid"
+        btnText: "View Details"
     },
     {
         id: "2",
@@ -23,7 +23,7 @@ const data = [
         owner: "John Deo",
         price: "2.7 ETH",
         count: "1 of 1",
-        btnText: "Place a Bid"
+        btnText: "View Details"
     },
     {
         id: "3",
@@ -32,7 +32,7 @@ const data = [
         owner: "Arham",
         price: "2.3 ETH",
         count: "1 of 1",
-        btnText: "Place a Bid"
+        btnText: "View Details"
     },
     {
         id: "4",
@@ -41,7 +41,7 @@ const data = [
         owner: "Yasmin",
         price: "1.8 ETH",
         count: "1 of 1",
-        btnText: "Place a Bid"
+        btnText: "View Details"
     },
     {
         id: "5",
@@ -50,7 +50,7 @@ const data = [
         owner: "Junaid",
         price: "1.7 ETH",
         count: "1 of 1",
-        btnText: "Place a Bid"
+        btnText: "View Details"
     },
     {
         id: "6",
@@ -59,7 +59,7 @@ const data = [
         owner: "ArtNox",
         price: "1.9 ETH",
         count: "1 of 1",
-        btnText: "Place a Bid"
+        btnText: "View Details"
     }
 ]
 

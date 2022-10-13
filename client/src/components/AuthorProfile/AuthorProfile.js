@@ -23,7 +23,8 @@ class AuthorProfile extends Component {
         return (
             <div className="card no-hover text-center">
                 <div className="image-over">
-                    <img className="card-img-top" src={this.state.data.img} alt="" />
+                <img className="rounded-circle" src={this.state.data.authorImg} alt="" />
+                    {/* <img className="card-img-top" src={this.state.data.img} alt="" /> */}
                     {/* Author */}
                     <div className="author">
                         <div className="author-thumb avatar-lg">

@@ -18,7 +18,7 @@ const initData = {
     volume: "64.1",
     highest_bid: "2.9 BNB",
     bid_count: "1 of 5",
-    btnText: "Place a Bid"
+    btnText: "View Details"
 }
 
 const tabData_1 = [

@@ -13,7 +13,7 @@ class ExploreOne extends Component {
         return (
             <div className="main">
                 <Header />
-                <Breadcrumb title="Explore" subpage="Explore" page="Explore Style 1" />
+                <Breadcrumb title="Explore" subpage="Explore" page="Items" />
                 <Explore />
                 <Footer />
                 <ModalSearch />
