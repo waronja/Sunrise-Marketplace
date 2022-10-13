@@ -31,40 +31,40 @@ const data = [
         id: "3",
         img: "/img/auction_3.jpg",
         date: "2021-09-15",
-        title: "Arts",
+        title: "Bar set",
         seller_thumb: "/img/avatar_3.jpg",
-        seller: "@MKHblots",
-        price: "2.3 BNB",
+        seller: "@Kinyanjui",
+        price: "Ksh 15,000",
         count: "1 of 1"
     },
     {
         id: "4",
         img: "/img/auction_4.jpg",
         date: "2021-12-29",
-        title: "Robotic Arts",
+        title: "Tandoori oven",
         seller_thumb: "/img/avatar_4.jpg",
-        seller: "@RioArham",
-        price: "1.8 BNB",
+        seller: "@Charles",
+        price: "Ksh 7,000",
         count: "1 of 1"
     },
     {
         id: "5",
         img: "/img/auction_5.jpg",
         date: "2022-01-24",
-        title: "Design Illusions",
+        title: "Frying pan",
         seller_thumb: "/img/avatar_5.jpg",
-        seller: "@ArtNox",
-        price: "1.7 BNB",
+        seller: "@Mama Shiro",
+        price: "Ksh 250",
         count: "1 of 1"
     },
     {
         id: "6",
         img: "/img/auction_6.jpg",
         date: "2022-03-30",
-        title: "Photography",
+        title: "Chips Displayer",
         seller_thumb: "/img/avatar_6.jpg",
-        seller: "@Junaid",
-        price: "3.5 BNB",
+        seller: "@Giddy",
+        price: "Ksh 7,000",
         count: "1 of 1"
     }
 ]
