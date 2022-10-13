@@ -1,26 +1,67 @@
 import React, { useState } from 'react';
+import ServerSideErrors from '../Create/ServerSideErrors';
 
     function Signup () {
-        const [username, setUsername] = useState("");
-        const [email, setEmail] = useState("")
-        const [password, setPassword] = useState("");
-        const [passwordConfirmation, setPasswordConfirmation] = useState("");
-        
-        function handleSubmit(e) {
+        const[isServerSideError, setIsServerSideError] = useState(false)
+        const[error, setError] = useState([])
+        const[formData, setFormData] = useState({
+            username:'',
+            password:'',
+            password_confirmation:''
+        })
+
+        const handleSubmit =(e)=>{
             e.preventDefault();
-            fetch("/signup", {
+            createAccount(formData)
+            console.log(formData);
+        }
+
+        const handleChange =(e)=>{
+            setFormData({...formData, [e.target.name]:e.target.value})
+        }
+
+        const createAccount = (data)=>{
+            fetch('http://localhost:3000/users',{
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
+                headers:{
+                    "Content-Type":"application/json"
                 },
-                body: JSON.stringify({
-                    username,
-                    email,
-                    password,
-                    password_confirmation: passwordConfirmation,
-                }),
-            }).then((res) => res.json()).then((data) => console.log(data))
-        }  
+                body:JSON.stringify(data)
+            })
+            .then((response)=>response.json())
+            .then((data)=>{
+                if(data['status']==="failed"){
+                    setIsServerSideError(true)
+                    setError(data['data'])
+                }else{
+                    setIsServerSideError(false)
+                    setError([])
+                }
+            })
+        // const createAccount = (data)=>{
+        //     fetch("http:localhost:3000/users",{
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         body: JSON.stringify(data),
+        //     })
+        //     .then((response)=>{
+        //         console.log(response.data);
+        //         response.json()
+        //     })
+        //     .then((data)=>{
+        //         console.log(data.status)
+        //     if(data['status']==="failed"){
+        //         setIsServerSideError(true)
+        //         setError(data['data'])
+        //     }else{
+        //         setIsServerSideError(false)
+        //         setError([])
+        //     }
+        // })
+        }
+        
         
         
         return (
@@ -31,24 +72,35 @@ import React, { useState } from 'react';
                                 <h5>Sign Up</h5>
                             <form className="item-form card no-hover" onSubmit={handleSubmit}>
                                 <div className="row">
+                                {isServerSideError && <ServerSideErrors errors={error}/>}
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="text" className="form-control" name="name" autoComplete="off" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Enter your Name" required="required" />
+                                            <input type="text" className="form-control"
+                                             name="username" 
+                                             autoComplete="off" 
+                                             value={formData.username} 
+                                             onChange={(e)=>handleChange(e)} 
+                                             placeholder="Enter your username" 
+                                             required="required" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="col-12">
+                                        <div className="form-group mt-3">
+                                            <input type="password" className="form-control" 
+                                            name="password" value={formData.password} 
+                                            onChange={(e)=>handleChange(e)} 
+                                            placeholder="Enter your Password"
+                                             required="required" />
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="email" className="form-control" name="email" value={email} onChange={(e) => setEmail (e.target.value)} placeholder="Enter your Email" required="required" />
-                                        </div>
-                                    </div>
-                                    <div className="col-12">
-                                        <div className="form-group mt-3">
-                                            <input type="password" className="form-control" name="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your Password" required="required" />
-                                        </div>
-                                    </div>
-                                    <div className="col-12">
-                                        <div className="form-group mt-3">
-                                            <input type="password" className="form-control" name="password_confirmation" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}placeholder="Confirm Password" required="required" />
+                                            <input type="password" className="form-control" name="password_confirmation" 
+                                            value={formData.password_confirmation}
+                                            onChange={(e)=>handleChange(e)} 
+                                             placeholder="Confirm Password" 
+                                             required="required" />
                                         </div>
                                     </div>
 

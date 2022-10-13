@@ -5,11 +5,14 @@ import ServerSideErrors from './ServerSideErrors';
 const Create =()=>{
     const[isServerSideError, setIsServerSideError] = useState(false)
     const[error, setError] = useState([])
+    const[selectedCategory, setSelectedCategory] = useState("")
     const[formData, setFormData] = useState({
         name:'',
         description:'',
         image:'',
-        price:''
+        price:'',
+        dimensions:'',
+        instock:''
     })
 
     const handleSubmit =(e)=>{
@@ -41,6 +44,15 @@ const Create =()=>{
             }
         })
     }
+    const fetchQuestions =()=>{
+        fetch('http://localhost:3000/categories')
+        .then((response)=>response.json())
+        .then((data)=>{
+            setSelectedCategory(data)
+        })
+    }
+
+    
    
         return (
             <section className="author-area">
@@ -66,6 +78,7 @@ const Create =()=>{
                                         <div className="input-group form-group">
                                             <div className="custom-file">
                                                 <input type="file" className="custom-file-input" id="inputGroupFile01" 
+                                                name="image"
                                                 value={formData.image}
                                                 onChange={(e)=>handleFormFields(e)}
                                                 />
@@ -83,7 +96,7 @@ const Create =()=>{
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group">
-                                            <textarea className="form-control" name="description" placeholder="Description" cols={30} rows={3} defaultValue={""} 
+                                            <textarea className="form-control" name="description" placeholder="Description" cols={30} rows={3} 
                                             value={formData.description}
                                             onChange={(e)=>handleFormFields(e)}
                                             />
@@ -105,6 +118,7 @@ const Create =()=>{
                                     <div className="col-12 col-md-6">
                                         <div className="form-group">
                                             <input type="text" className="form-control" placeholder="Dimensions" required="required"
+                                            name='dimensions'
                                             value={formData.dimensions}
                                             onChange={(e)=>handleFormFields(e)}
                                              />
@@ -112,8 +126,8 @@ const Create =()=>{
                                     </div>
                                     <div className="col-12 col-md-6">
                                         <div className="form-group">
-                                            <input type="text" className="form-control" name="items" placeholder="No of Items" required="required"
-                                            value={formData.title}
+                                            <input type="number" className="form-control" name="instock" placeholder="No of Items" required="required"
+                                            value={formData.instock}
                                             onChange={(e)=>handleFormFields(e)}
                                              />
                                         </div>
