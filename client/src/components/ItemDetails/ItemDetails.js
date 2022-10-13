@@ -15,7 +15,7 @@ const initData = {
     price_2: "$500.89",
     count: "1 of 5",
     size: "14000 x 14000 px",
-    volume: "64.1",
+    // volume: "64.1",
     // highest_bid: "2.9 BNB",
     // bid_count: "1 of 5",
     btnText: "Contact Seller"
@@ -198,7 +198,7 @@ class ItemDetails extends Component {
                                             <span>{this.state.initData.size}</span>
                                         </li>
                                         <li>
-                                            <span>Volume Traded </span>
+                                            {/* <span>Volume Traded </span> */}
                                             <span>{this.state.initData.volume}</span>
                                         </li>
                                     </ul>
