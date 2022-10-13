@@ -38,28 +38,7 @@ import ServerSideErrors from '../Create/ServerSideErrors';
                     setError([])
                 }
             })
-        // const createAccount = (data)=>{
-        //     fetch("http:localhost:3000/users",{
-        //         method: "POST",
-        //         headers: {
-        //             "Content-Type": "application/json"
-        //         },
-        //         body: JSON.stringify(data),
-        //     })
-        //     .then((response)=>{
-        //         console.log(response.data);
-        //         response.json()
-        //     })
-        //     .then((data)=>{
-        //         console.log(data.status)
-        //     if(data['status']==="failed"){
-        //         setIsServerSideError(true)
-        //         setError(data['data'])
-        //     }else{
-        //         setIsServerSideError(false)
-        //         setError([])
-        //     }
-        // })
+        
         }
         
         
