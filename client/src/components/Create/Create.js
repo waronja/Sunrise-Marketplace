@@ -1,8 +1,47 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import AuthorProfile from "../AuthorProfile/AuthorProfile";
+import ServerSideErrors from './ServerSideErrors';
 
-class Create extends Component {
-    render() {
+const Create =()=>{
+    const[isServerSideError, setIsServerSideError] = useState(false)
+    const[error, setError] = setError([])
+    const[formData, setFormData] = useState({
+        name:'',
+        description:'',
+        image:'',
+        price:''
+    })
+
+    const handleSubmit =(e)=>{
+        e.preventDefault()
+        createItem(formData)
+        console.log(formData);
+      }
+
+      const handleFormFields = (e)=>{
+        setFormData({...formData, [e.target.name]:e.target.value})
+      }
+
+    const createItem = (data)=>{
+        fetch('http://localhost:3000/items',{
+            method: "POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify(data)
+        })
+        .then((response)=>response.json())
+        .then((data)=>{
+            if(data['status']==="failed"){
+                setIsServerSideError(true)
+                setError(data['data'])
+            }else{
+                setIsServerSideError(false)
+                setError([])
+            }
+        })
+    }
+   
         return (
             <section className="author-area">
                 <div className="container">
@@ -20,29 +59,42 @@ class Create extends Component {
                                 </div>
                             </div>
                             {/* Item Form */}
-                            <form className="item-form card no-hover">
+                            <form className="item-form card no-hover" onSubmit={handleSubmit}>
                                 <div className="row">
+                                {isServerSideError && <ServerSideErrors errors={error}/>}
                                     <div className="col-12">
                                         <div className="input-group form-group">
                                             <div className="custom-file">
-                                                <input type="file" className="custom-file-input" id="inputGroupFile01" />
+                                                <input type="file" className="custom-file-input" id="inputGroupFile01" 
+                                                value={formData.image}
+                                                onChange={(e)=>handleFormFields(e)}
+                                                />
                                                 <label className="custom-file-label" htmlFor="inputGroupFile01">Choose file</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="text" className="form-control" name="name" placeholder="Item Name" required="required" />
-                                        </div>
+                                            <input type="text" className="form-control" name="name" placeholder="Item Name" required="required"
+                                            value={formData.name}
+                                            onChange={(e)=>handleFormFields(e)}
+                                             />
+                                           </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group">
-                                            <textarea className="form-control" name="textarea" placeholder="Description" cols={30} rows={3} defaultValue={""} />
+                                            <textarea className="form-control" name="description" placeholder="Description" cols={30} rows={3} defaultValue={""} 
+                                            value={formData.description}
+                                            onChange={(e)=>handleFormFields(e)}
+                                            />
                                         </div>
                                     </div>
                                     <div className="col-12 col-md-6">
                                         <div className="form-group">
-                                            <input type="text" className="form-control" name="price" placeholder="Item Price" required="required" />
+                                            <input type="text" className="form-control" name="price" placeholder="Item Price" required="required" 
+                                            value={formData.price}
+                                            onChange={(e)=>handleFormFields(e)}
+                                            />
                                         </div>
                                     </div>
                                     <div className="col-12 col-md-6">
@@ -52,28 +104,18 @@ class Create extends Component {
                                     </div>
                                     <div className="col-12 col-md-6">
                                         <div className="form-group">
-                                            <input type="text" className="form-control" placeholder="Dimensions" required="required" />
+                                            <input type="text" className="form-control" placeholder="Dimensions" required="required"
+                                            value={formData.dimensions}
+                                            onChange={(e)=>handleFormFields(e)}
+                                             />
                                         </div>
                                     </div>
                                     <div className="col-12 col-md-6">
                                         <div className="form-group">
-                                            <input type="text" className="form-control" name="items" placeholder="No of Items" required="required" />
-                                        </div>
-                                    </div>
-                                    <div className="col-12">
-                                        <div className="form-group mt-3">
-                                            <div className="form-check form-check-inline">
-                                                <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" defaultValue="option1" defaultChecked />
-                                                <label className="form-check-label" htmlFor="inlineRadio1">Put on Sale</label>
-                                            </div>
-                                            <div className="form-check form-check-inline">
-                                                <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" defaultValue="option2" />
-                                                <label className="form-check-label" htmlFor="inlineRadio2">Instant Sale Price</label>
-                                            </div>
-                                            <div className="form-check form-check-inline">
-                                                <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" defaultValue="option3" />
-                                                <label className="form-check-label" htmlFor="inlineRadio3">Unlock Purchased</label>
-                                            </div>
+                                            <input type="text" className="form-control" name="items" placeholder="No of Items" required="required"
+                                            value={formData.title}
+                                            onChange={(e)=>handleFormFields(e)}
+                                             />
                                         </div>
                                     </div>
                                     <div className="col-12">
@@ -86,7 +128,6 @@ class Create extends Component {
                 </div>
             </section>
         );
-    }
 }
 
 export default Create;

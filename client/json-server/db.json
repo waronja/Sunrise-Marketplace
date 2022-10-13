@@ -5,7 +5,7 @@
         "sellerData": [
             {
               "id": 1,
-              "img": "/img/avatar_1.jpg",
+              "img": "/img/pan.png",
               "seller": "@Richard",
               "price": "1.5 BNB"
             },
@@ -48,56 +48,56 @@
         "collectionData": [
             {
                 "id": 1,
-                "img": "/img/author_1.jpg",
-                "avatar": "/img/avatar_1.jpg",
+                "img": "/img/",
+                "avatar": "/img/chips.png",
                 "title": "Virtual Worlds",
                 "content": "ERC-729"
             },
             {
                 "id": 2,
-                "img": "/img/author_2.jpg",
+                "img": "/img/Riko.png",
                 "avatar": "/img/avatar_2.jpg",
                 "title": "Digital Arts",
                 "content": "ERC-522"
             },
             {
                 "id": 3,
-                "img": "/img/author_3.jpg",
+                "img": "/img/jiko.jpg",
                 "avatar": "/img/avatar_3.jpg",
                 "title": "Sports",
                 "content": "ERC-495"
             },
             {
                 "id": 4,
-                "img": "/img/author_4.jpg",
+                "img": "/img/meat.jpeg",
                 "avatar": "/img/avatar_4.jpg",
                 "title": "Photography",
                 "content": "ERC-873"
             },
             {
                 "id": 5,
-                "img": "/img/author_5.jpg",
+                "img": "/img/oven.png",
                 "avatar": "/img/avatar_5.jpg",
                 "title": "Trading Cards",
                 "content": "ERC-397"
             },
             {
                 "id": 6,
-                "img": "/img/author_6.jpg",
+                "img": "/img/Riko.png",
                 "avatar": "/img/avatar_6.jpg",
                 "title": "Walking On Air",
                 "content": "ERC-403"
             },
             {
                 "id": 7,
-                "img": "/img/author_7.jpg",
+                "img": "/img/sufuria.jpg",
                 "avatar": "/img/avatar_7.jpg",
                 "title": "Domain Names",
                 "content": "ERC-687"
             },
             {
                 "id": 8,
-                "img": "/img/author_8.jpg",
+                "img": "/img/oven.png",
                 "avatar": "/img/avatar_8.jpg",
                 "title": "Collectibles",
                 "content": "ERC-972"
@@ -141,7 +141,7 @@
         "exploreData": [
             {
                 "id": 1,
-                "img": "/img/auction_1.jpg",
+                "img": "/img/mdem.jpg",
                 "title": "Walking On Air",
                 "owner": "Richard",
                 "price": "1.5 ETH",
@@ -150,7 +150,7 @@
             },
             {
                 "id": 2,
-                "img": "/img/auction_2.jpg",
+                "img": "/img/jiko.png",
                 "title": "Domain Names",
                 "owner": "John Deo",
                 "price": "2.7 ETH",
@@ -168,7 +168,7 @@
             },
             {
                 "id": 4,
-                "img": "/img/auction_4.jpg",
+                "img": "/img/meat.jpeg",
                 "title": "Industrial Revolution",
                 "owner": "Yasmin",
                 "price": "1.8 ETH",
@@ -177,7 +177,7 @@
             },
             {
                 "id": 5,
-                "img": "/img/auction_5.jpg",
+                "img": "/img/oven.png",
                 "title": "Utility",
                 "owner": "Junaid",
                 "price": "1.7 ETH",
@@ -186,7 +186,7 @@
             },
             {
                 "id": 6,
-                "img": "/img/auction_6.jpg",
+                "img": "/img/Riko.png",
                 "title": "Sports",
                 "owner": "ArtNox",
                 "price": "1.9 ETH",
@@ -195,7 +195,7 @@
             },
             {
                 "id": 7,
-                "img": "/img/auction_7.jpg",
+                "img": "/img/sina-tab.png",
                 "title": "Cartoon Heroes",
                 "owner": "Junaid",
                 "price": "3.2 ETH",
@@ -204,7 +204,7 @@
             },
             {
                 "id": 8,
-                "img": "/img/auction_8.jpg",
+                "img": "/img/pan.png",
                 "title": "Gaming Chair",
                 "owner": "Johnson",
                 "price": "0.69 ETH",
@@ -655,7 +655,7 @@
                 "img": "/img/blog_9.jpg",
                 "author": "Johnson",
                 "date": "Sep 01, 2021",
-                "title": "The beginner’s guide to creating & selling digital art NFTs",
+                "title": "The beginners guide to creating & selling digital art NFTs",
                 "content": "Lorem ipsum dolor, sit voluptatem consectetur adipisicing elit.",
                 "btnText": "Read More"
             }
@@ -663,7 +663,7 @@
     },
     "blogSingle": {
         "image": "/img/blog_single.jpg",
-        "title": "The beginner’s guide to creating & selling digital art NFTs",
+        "title": "The beginners guide to creating & selling digital art NFTs",
         "content_1": "Far far away, behind the word mountains, far from the countries Vokalia and coast, there live the blind texts. Separated they live in right at the coast of the Semantics, a large language ocean coast of the Semantics, a large language ocean.",
         "content_2": "A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. There live the blind texts. Separated they live in right at the coast, a large language ocean. Sed nisi nisi, amet, consectetur adipiscing rutrum sit amet elit.",
         "content_3": "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.",

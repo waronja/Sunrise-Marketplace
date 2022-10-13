@@ -1160,7 +1160,8 @@ aside {
 }
 
 .breadcrumb-area {
-  background: rgba(0, 0, 0, 0) url("/img/inner_bg.jpg") no-repeat scroll top center/cover;
+  /* background: rgba(0, 0, 0, 0) url("/img/inner_bg.jpg") no-repeat scroll top center/cover; */
+  background: rgba(0, 0, 0, 0) url("/img/inner_bg.jpg") no-repeat scroll center/cover;
 }
 
 .breadcrumb-area.bg-overlay::after {
