@@ -4,7 +4,7 @@ import ServerSideErrors from './ServerSideErrors';
 
 const Create =()=>{
     const[isServerSideError, setIsServerSideError] = useState(false)
-    const[error, setError] = setError([])
+    const[error, setError] = useState([])
     const[formData, setFormData] = useState({
         name:'',
         description:'',
