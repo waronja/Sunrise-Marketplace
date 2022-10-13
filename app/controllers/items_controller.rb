@@ -44,7 +44,6 @@ class ItemsController < ApplicationController
         else
             render json:{error:"no information was found"}, status: :not_found
         end
-
     end
 
     def destroy
