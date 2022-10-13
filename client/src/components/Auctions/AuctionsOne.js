@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 const initData = {
-    pre_heading: "Auctions",
-    heading: "Live Auctions",
+    pre_heading: "New Products",
+    heading: "New Products",
     btnText: "View All"
 }
 
@@ -11,20 +11,20 @@ const data = [
         id: "1",
         img: "/img/auction_1.jpg",
         date: "2021-12-09",
-        title: "Virtual Worlds",
+        title: "Wheel-barrow",
         seller_thumb: "/img/avatar_1.jpg",
-        seller: "@Richard",
-        price: "1.5 BNB",
+        seller: "@Kinuthia",
+        price: "Ksh 5,000",
         count: "1 of 1"
     },
     {
         id: "2",
         img: "/img/auction_2.jpg",
         date: "2021-10-05",
-        title: "Collectibles",
+        title: "Sufuria",
         seller_thumb: "/img/avatar_2.jpg",
-        seller: "@JohnDeo",
-        price: "2.7 BNB",
+        seller: "@Mama Ntilie",
+        price: "Ksh 500",
         count: "1 of 1"
     },
     {
