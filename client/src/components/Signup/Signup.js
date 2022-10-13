@@ -42,7 +42,6 @@ import ServerSideErrors from '../Create/ServerSideErrors';
         }
         
         
-        
         return (
             <section className="author-area">
                 <div className="container">
