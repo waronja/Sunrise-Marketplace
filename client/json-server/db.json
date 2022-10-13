@@ -531,28 +531,28 @@
                 "icon": "fab fa-vine"
             }
         ],
-        "widgetData_1": [
-            {
-                "id": 1,
-                "text": "All NFTs"
-            },
-            {
-                "id": 2,
-                "text": "How It Works"
-            },
-            {
-                "id": 3,
-                "text": "Create"
-            },
-            {
-                "id": 4,
-                "text": "Explore"
-            },
-            {
-                "id": 5,
-                "text": "Privacy & Terms"
-            }
-        ],
+        // "widgetData_1": [
+        //     {
+        //         "id": 1,
+        //         "text": "All Products"
+        //     },
+        //     {
+        //         "id": 2,
+        //         "text": "How It Works"
+        //     },
+        //     {
+        //         "id": 3,
+        //         "text": "Create"
+        //     },
+        //     {
+        //         "id": 4,
+        //         "text": "Explore"
+        //     },
+        //     {
+        //         "id": 5,
+        //         "text": "Privacy & Terms"
+        //     }
+        // ],
         "widgetData_2": [
             {
                 "id": 1,
