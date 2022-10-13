@@ -48,7 +48,7 @@ import React, { useState } from 'react';
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="password" className="form-control" name="password_confirmation" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}placeholder="Enter your Password" required="required" />
+                                            <input type="password" className="form-control" name="password_confirmation" value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)}placeholder="Confirm Password" required="required" />
                                         </div>
                                     </div>
 
