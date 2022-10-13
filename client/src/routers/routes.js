@@ -10,8 +10,8 @@ import ExploreFour from "../themes/explore-four";
 import Auctions from "../themes/auctions";
 import ItemDetails from "../themes/item-details";
 import Activity from "../themes/activity";
-import Blog from "../themes/blog";
-import BlogSingle from "../themes/blog-single";
+// import Blog from "../themes/blog";
+// import BlogSingle from "../themes/blog-single";
 import HelpCenter from "../themes/help-center";
 import Authors from "../themes/authors";
 import Author from "../themes/author";
@@ -35,8 +35,8 @@ class MyRouts extends React.Component {
             <Route exact path="/auctions" component={Auctions} />
             <Route exact path="/item-details" component={ItemDetails} />
             <Route exact path="/activity" component={Activity} />
-            <Route exact path="/blog" component={Blog} />
-            <Route exact path="/blog-single" component={BlogSingle} />
+            {/* <Route exact path="/blog" component={Blog} />
+            <Route exact path="/blog-single" component={BlogSingle} /> */}
             <Route exact path="/help-center" component={HelpCenter} />
             <Route exact path="/authors" component={Authors} />
             <Route exact path="/author" component={Author} />

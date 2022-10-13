@@ -1,6 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function Login () {
+function Login (onLogin) {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    
+    function handleSubmit(e) {
+        e.preventDefault();
+        fetch("/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, password }),
+        }).then((r) => {
+            if (r.ok) {
+                r.json().then((user) => onLogin(user));
+            } else {
+                r.json().then((data) => console.log(data));
+            }
+        });
+    }
 
         return (
             <section className="author-area">
@@ -8,16 +27,16 @@ function Login () {
                     <div className="row justify-content-center">
                         <div className="col-12 col-md-8 col-lg-7">
                             <h5>Login</h5>
-                            <form className="item-form card no-hover">
+                            <form className="item-form card no-hover" onSubmit={handleSubmit}>
                                 <div className="row">
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="email" className="form-control" name="email" placeholder="Enter your Email" required="required" />
+                                            <input type="email" className="form-control" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your Email" required="required" />
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="password" className="form-control" name="password" placeholder="Enter your Password" required="required" />
+                                            <input type="password" className="form-control" name="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your Password" required="required" />
                                         </div>
                                     </div>
                                     <div className="col-12">
@@ -42,6 +61,5 @@ function Login () {
             </section>
         );
     }
-// }
 
 export default Login;

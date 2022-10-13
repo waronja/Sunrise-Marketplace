@@ -18,9 +18,9 @@ import React, { useState } from 'react';
                     email,
                     password,
                     password_confirmation: passwordConfirmation,
-      }),
-    }).then((res) => res.json()).then((data) => console.log(data))
-  }
+                }),
+            }).then((res) => res.json()).then((data) => console.log(data))
+        }  
         
         
         return (
@@ -43,7 +43,7 @@ import React, { useState } from 'react';
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="password" className="form-control" name="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your Password" required="required" />
+                                            <input type="password" className="form-control" name="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your Password" required="required" />
                                         </div>
                                     </div>
                                     <div className="col-12">
