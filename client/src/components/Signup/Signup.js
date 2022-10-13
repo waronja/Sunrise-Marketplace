@@ -22,7 +22,6 @@ import React, { useState } from 'react';
             }).then((res) => res.json()).then((data) => console.log(data))
         }  
         
-        
         return (
             <section className="author-area">
                 <div className="container">
