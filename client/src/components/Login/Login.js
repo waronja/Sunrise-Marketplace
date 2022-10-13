@@ -19,7 +19,7 @@ function Login () {
     
     function handleSubmit(e) {
         e.preventDefault();
-        fetch("http://localhost:3000/users", {
+        fetch("http://localhost:3000/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -30,6 +30,7 @@ function Login () {
                 res.json().then((user)=>{
                     setCurrentUser(user)
                     setIsAuthenticated(true)
+                    history.push('/create')
                 })
             }else{
                 res.json().then((errors)=>{
@@ -38,7 +39,7 @@ function Login () {
                 })
             }
         })
-        history.push('/create')
+        
     }
 
         return (
@@ -52,7 +53,7 @@ function Login () {
                                 {isServerSideError && <ServerSideErrors errors={error}/>}
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="email" className="form-control" 
+                                            <input type="text" className="form-control" 
                                             name="username" 
                                             value={formData.username} 
                                             onChange={(e) => handleChange(e)} 
