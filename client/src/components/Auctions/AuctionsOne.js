@@ -2,8 +2,8 @@ import React,{useEffect, useState} from 'react';
 import { Spinner } from '../Explore/spinner/Spinner';
 
 const initData = {
-    pre_heading: "Auctions",
-    heading: "Live Auctions",
+    pre_heading: "New Products",
+    heading: "New Products",
     btnText: "View All"
 }
 
@@ -12,60 +12,60 @@ const data = [
         id: "1",
         img: "/img/auction_1.jpg",
         date: "2021-12-09",
-        title: "Virtual Worlds",
+        title: "Wheel-barrow",
         seller_thumb: "/img/avatar_1.jpg",
-        seller: "@Richard",
-        price: "1.5 BNB",
+        seller: "@Kinuthia",
+        price: "Ksh 5,000",
         count: "1 of 1"
     },
     {
         id: "2",
         img: "/img/auction_2.jpg",
         date: "2021-10-05",
-        title: "Collectibles",
+        title: "Sufuria",
         seller_thumb: "/img/avatar_2.jpg",
-        seller: "@JohnDeo",
-        price: "2.7 BNB",
+        seller: "@Mama Ntilie",
+        price: "Ksh 500",
         count: "1 of 1"
     },
     {
         id: "3",
         img: "/img/auction_3.jpg",
         date: "2021-09-15",
-        title: "Arts",
+        title: "Bar set",
         seller_thumb: "/img/avatar_3.jpg",
-        seller: "@MKHblots",
-        price: "2.3 BNB",
+        seller: "@Kinyanjui",
+        price: "Ksh 15,000",
         count: "1 of 1"
     },
     {
         id: "4",
         img: "/img/auction_4.jpg",
         date: "2021-12-29",
-        title: "Robotic Arts",
+        title: "Tandoori oven",
         seller_thumb: "/img/avatar_4.jpg",
-        seller: "@RioArham",
-        price: "1.8 BNB",
+        seller: "@Charles",
+        price: "Ksh 7,000",
         count: "1 of 1"
     },
     {
         id: "5",
         img: "/img/auction_5.jpg",
         date: "2022-01-24",
-        title: "Design Illusions",
+        title: "Frying pan",
         seller_thumb: "/img/avatar_5.jpg",
-        seller: "@ArtNox",
-        price: "1.7 BNB",
+        seller: "@Mama Shiro",
+        price: "Ksh 250",
         count: "1 of 1"
     },
     {
         id: "6",
         img: "/img/auction_6.jpg",
         date: "2022-03-30",
-        title: "Photography",
+        title: "Chips Displayer",
         seller_thumb: "/img/avatar_6.jpg",
-        seller: "@Junaid",
-        price: "3.5 BNB",
+        seller: "@Giddy",
+        price: "Ksh 7,000",
         count: "1 of 1"
     }
 ]

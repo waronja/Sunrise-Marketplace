@@ -7,12 +7,12 @@ const initData = {
     // tab_2: "History",
     // tab_3: "Details",
     ownerImg: "/img/avatar_1.jpg",
-    itemOwner: "Themeland",
+    itemOwner: "KInuthia",
     created: "15 Jul 2021",
-    title: "Walking On Air",
+    title: "Sufuria",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.",
     // price_1: "1.5 ETH",
-    price_2: "$500.89",
+    price_2: "Ksh 500",
     count: "1 of 5",
     size: "14000 x 14000 px",
     // volume: "64.1",
@@ -25,23 +25,23 @@ const tabData_1 = [
     {
         id: "1",
         img: "/img/avatar_1.jpg",
-        price: "14 ETH",
+        price: "Ksh 12,000",
         time: "4 hours ago",
-        author: "@arham"
+        author: "@Mama Shiro"
     },
     {
         id: "2",
         img: "/img/avatar_2.jpg",
-        price: "10 ETH",
+        price: "Ksh 100,000",
         time: "8 hours ago",
-        author: "@junaid"
+        author: "@Giddy"
     },
     {
         id: "3",
         img: "/img/avatar_3.jpg",
-        price: "12 ETH",
+        price: "Ksh 30,000",
         time: "3 hours ago",
-        author: "@yasmin"
+        author: "@Charles"
     }
 ]
 
@@ -49,23 +49,23 @@ const tabData_2 = [
     {
         id: "1",
         img: "/img/avatar_6.jpg",
-        price: "32 ETH",
+        price: "Ksh 50,000",
         time: "10 hours ago",
-        author: "@hasan"
+        author: "@Kinyanjui"
     },
     {
         id: "2",
         img: "/img/avatar_7.jpg",
-        price: "24 ETH",
+        price: "Ksh 20,000",
         time: "6 hours ago",
-        author: "@artnox"
+        author: "@Mama Ntilie"
     },
     {
         id: "3",
         img: "/img/avatar_8.jpg",
-        price: "29 ETH",
+        price: "Ksh 15,000",
         time: "12 hours ago",
-        author: "@meez"
+        author: "@Kinuthia"
     }
 ]
 
