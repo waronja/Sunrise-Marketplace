@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
  resources :items, only:[:index, :create, :show, :update, :destroy]
  resources :users, only:[:index, :create, :show]
+ resources :categories, only:[:index, :create, :show]
 
  #session
  post '/login', to: 'sessions#create'

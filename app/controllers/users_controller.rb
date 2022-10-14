@@ -19,6 +19,8 @@ class UsersController < ApplicationController
         if user.valid?
             session[:user_id] = user.id
             render json: {data:user,status: "success"}, status: :created
+        elsif user.password != user.password_confirmation
+            render json: {error:user.errors.full_messages}, status: :unprocessable_entity
         else
             render json:{error:user.errors.full_messages,status:"failed"}, status: :unprocessable_entity
         end
@@ -27,7 +29,7 @@ class UsersController < ApplicationController
     def show
         user = User.find(session[:user_id])
         render json: user
-      end
+    end
 
     private
     def user_params

@@ -142,11 +142,7 @@ class ExploreSix extends Component {
                                             <hr />
                                             <div className="card-bottom d-flex justify-content-between">
                                                 <span>{item.price}</span>
-<<<<<<< HEAD
                                                 <span><i className=" mr-2" />{item.likes}</span>
-=======
-                                                <span><i className="MoreVertIcon mr-2" />{item.likes}</span>
->>>>>>> 98b9597820fdb17f6c2ed559dab8209312eec122
                                             </div>
                                         </div>
                                     </div>

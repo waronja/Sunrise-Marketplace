@@ -1,21 +1,27 @@
 class ItemsController < ApplicationController
-    before_action :authorize
+    # before_action :authorize
 
     def index
         @items = Item.all 
         if @items
-            render json: @items, include: :category, status: :ok
+            render json: @items, status: :ok
         else
             render json:{error:"No Items found"}, status: :not_found
         end
     end
 
     def create 
-        @item = Item.create(item_params)
-        if @item.valid?
-            render json: {data:@item, status: "success"},serializer: ItemsSerializer, status: :created
+        if session[:user_id]
+            user = User.find_by(session[:user_id])
+            item = user.items.create(item_params, user_id==user)
+            if item.valid?
+                item.save
+                render json: {data:item, status: "success"}, status: :created
+            else
+                 render json:{errors:item.errors.full_messages, status:"failed"}, status: :unprocessable_entity
+            end
         else
-            render json:{error:@item.errors.full_messages, status:"failed"}, status: :unprocessable_entity
+            render json: { errors: ["Not authorized"] }, status: :unauthorized
         end
     end
 
@@ -60,7 +66,7 @@ class ItemsController < ApplicationController
 
     private
     def item_params
-        params.require(:item).permit(:name, :description, :price, :dimensions, :instock)
+        params.require(:item).permit(:name, :description, :price, :instock, :image, :category, :user_id)
     end
 
     def authorize

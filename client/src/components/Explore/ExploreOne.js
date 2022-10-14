@@ -1,4 +1,7 @@
-import React, { Component } from 'react';
+import React,{useEffect, useState} from 'react';
+import { Spinner } from './spinner/Spinner';
+import Products from './products/Products';
+
 
 const initData = {
     pre_heading: "Available Items",
@@ -118,18 +121,30 @@ const data = [
     }
 ]
 
-class ExploreOne extends Component {
-    state = {
-        initData: {},
-        data: []
-    }
-    componentDidMount(){
-        this.setState({
-            initData: initData,
-            data: data
+const ExploreOne =()=> {
+    const[products, setProducts] = useState([])
+    const[loading, setLoading] = useState(false)
+
+    const fetchProducts = () =>{
+        fetch('http://localhost:3000/items')
+        .then((response)=>response.json())
+        .then((data)=>{
+            setLoading(true)
+            setProducts(data)
         })
     }
-    render() {
+    
+    useEffect(()=>{
+        fetchProducts()
+    },[])
+    
+    const productList = products.map((product)=>(
+        <Products 
+        key={product.id}
+        product={product}
+        />
+    ))
+    
         return (
             <section className="explore-area load-more p-0">
                 <div className="container">
@@ -138,17 +153,17 @@ class ExploreOne extends Component {
                             {/* Intro */}
                             <div className="intro d-flex justify-content-between align-items-end m-0">
                                 <div className="intro-content">
-                                    <span>{this.state.initData.pre_heading}</span>
-                                    <h3 className="mt-3 mb-0">{this.state.initData.heading}</h3>
-                                </div>
+                                    <span>Latest Products</span>
+                                    {/* <h3 className="mt-3 mb-0">{this.state.initData.heading}</h3>
+                                </div> */}
                                 <div className="intro-btn">
-                                    <a className="btn content-btn" href="/explore-3">{this.state.initData.btn_1}</a>
+                                    {/* <a className="btn content-btn" href="/explore-3">{this.state.initData.btn_1}</a> */}
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="row items">
-                        {this.state.data.map((item, idx) => {
+                        {products.map((item, idx) => {
                             return (
                                 <div key={`exo_${idx}`} className="col-12 col-sm-6 col-lg-3 item">
                                     <div className="card">
@@ -184,13 +199,13 @@ class ExploreOne extends Component {
                     </div>
                     <div className="row">
                         <div className="col-12 text-center">
-                            <a id="load-btn" className="btn btn-bordered-white mt-5" href="#">{this.state.initData.btn_2}</a>
+                            {/* <a id="load-btn" className="btn btn-bordered-white mt-5" href="#">{this.state.initData.btn_2}</a> */}
                         </div>
                     </div>
                 </div>
+                </div>
             </section>
         );
-    }
 }
 
 export default ExploreOne;
