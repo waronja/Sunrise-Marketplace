@@ -4,8 +4,8 @@ import ServerSideErrors from './ServerSideErrors';
 
 const Create =()=>{
     const[isServerSideError, setIsServerSideError] = useState(false)
+    const [category, setCategory] = useState("")
     const[error, setError] = useState([])
-    const[selectedCategory, setSelectedCategory] = useState("")
     const[formData, setFormData] = useState({
         name:'',
         description:'',
@@ -48,12 +48,11 @@ const Create =()=>{
         fetch('http://localhost:3000/categories')
         .then((response)=>response.json())
         .then((data)=>{
-            setSelectedCategory(data)
+            setCategory(data)
         })
+
     }
 
-    
-   
         return (
             <section className="author-area">
                 <div className="container">
