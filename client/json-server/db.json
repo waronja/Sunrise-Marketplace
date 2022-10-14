@@ -146,7 +146,7 @@
                 "owner": "Richard",
                 "price": "1.5 ETH",
                 "count": "1 of 1",
-                "btnText": "View Details",
+                "btnText": "View Details"
             },
             {
                 "id": 2,
@@ -531,28 +531,7 @@
                 "icon": "fab fa-vine"
             }
         ],
-        "widgetData_1": [
-            {
-                "id": 1,
-                "text": "All NFTs"
-            },
-            {
-                "id": 2,
-                "text": "How It Works"
-            },
-            {
-                "id": 3,
-                "text": "Create"
-            },
-            {
-                "id": 4,
-                "text": "Explore"
-            },
-            {
-                "id": 5,
-                "text": "Privacy & Terms"
-            }
-        ],
+      
         "widgetData_2": [
             {
                 "id": 1,

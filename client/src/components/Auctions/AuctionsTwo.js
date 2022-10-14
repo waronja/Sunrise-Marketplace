@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 const initData = {
     pre_heading: "Latest Products",
-    //heading: "Latest Products",
-    //content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.",
     btnText: "Load More"
 }
 

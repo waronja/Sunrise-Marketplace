@@ -15,7 +15,7 @@ import Activity from "../themes/activity";
 import HelpCenter from "../themes/help-center";
 import Authors from "../themes/authors";
 import Author from "../themes/author";
-import WalletConnect from "../themes/wallet-connect";
+// import WalletConnect from "../themes/wallet-connect";
 import Create from "../themes/create";
 import Login from "../themes/login";
 import Signup from "../themes/signup";
@@ -35,12 +35,8 @@ class MyRouts extends React.Component {
             <Route exact path="/auctions" component={Auctions} />
             <Route exact path="/item-details" component={ItemDetails} />
             <Route exact path="/activity" component={Activity} />
-            {/* <Route exact path="/blog" component={Blog} />
-            <Route exact path="/blog-single" component={BlogSingle} /> */}
-            <Route exact path="/help-center" component={HelpCenter} />
             <Route exact path="/authors" component={Authors} />
             <Route exact path="/author" component={Author} />
-            <Route exact path="/wallet-connect" component={WalletConnect} />
             <Route exact path="/create" component={Create} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />

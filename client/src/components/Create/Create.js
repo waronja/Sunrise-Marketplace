@@ -7,9 +7,11 @@ const Create =()=>{
     const[error, setError] = useState([])
     const[formData, setFormData] = useState({
         name:'',
+        category:'',
         description:'',
         image:'',
-        price:''
+        price:'',
+        instock:''
     })
 
     const handleSubmit =(e)=>{
@@ -41,6 +43,8 @@ const Create =()=>{
             }
         })
     }
+
+    
    
         return (
             <section className="author-area">
@@ -59,20 +63,21 @@ const Create =()=>{
                                 </div>
                             </div>
                             {/* Item Form */}
-                            <form className="item-form card no-hover" onSubmit={handleSubmit}>
+                            <form className="item-form card no-hover" onSubmit={handleSubmit} enctype="multipart/form-data" method="post" accept-charset="UTF-8" >
                                 <div className="row">
-                                {isServerSideError && <ServerSideErrors errors={error}/>}
-                                    <div className="col-12">
+                                
+                                    {/* <div className="col-12">
                                         <div className="input-group form-group">
                                             <div className="custom-file">
-                                                <input type="file" className="custom-file-input" id="inputGroupFile01" 
+                                                <input type="text" className="form-group" id="image" 
+                                                name="image"
                                                 value={formData.image}
                                                 onChange={(e)=>handleFormFields(e)}
                                                 />
-                                                <label className="custom-file-label" htmlFor="inputGroupFile01">Choose file</label>
+                                                <label className="custom-file-label" htmlFor="image">image</label>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                     <div className="col-12">
                                         <div className="form-group mt-3">
                                             <input type="text" className="form-control" name="name" placeholder="Item Name" required="required"
@@ -82,8 +87,24 @@ const Create =()=>{
                                            </div>
                                     </div>
                                     <div className="col-12">
+                                        <div className="form-group mt-3">
+                                            <input type="text" className="form-control" name="category" placeholder="Item Category" required="required"
+                                            value={formData.category}
+                                            onChange={(e)=>handleFormFields(e)}
+                                             />
+                                           </div>
+                                    </div>
+                                    <div className="col-12">
+                                        <div className="form-group mt-3">
+                                            <input type="text" className="form-control" name="image" placeholder="product image" required="required"
+                                            value={formData.image}
+                                            onChange={(e)=>handleFormFields(e)}
+                                             />
+                                           </div>
+                                    </div>
+                                    <div className="col-12">
                                         <div className="form-group">
-                                            <textarea className="form-control" name="description" placeholder="Description" cols={30} rows={3} defaultValue={""} 
+                                            <textarea className="form-control" name="description" placeholder="Description" cols={30} rows={3} 
                                             value={formData.description}
                                             onChange={(e)=>handleFormFields(e)}
                                             />
@@ -97,23 +118,12 @@ const Create =()=>{
                                             />
                                         </div>
                                     </div>
+                                   
+                                   
                                     <div className="col-12 col-md-6">
                                         <div className="form-group">
-                                            <input type="text" className="form-control" name="category" placeholder="category" required="required" />
-                                        </div>
-                                    </div>
-                                    <div className="col-12 col-md-6">
-                                        <div className="form-group">
-                                            <input type="text" className="form-control" placeholder="Dimensions" required="required"
-                                            value={formData.dimensions}
-                                            onChange={(e)=>handleFormFields(e)}
-                                             />
-                                        </div>
-                                    </div>
-                                    <div className="col-12 col-md-6">
-                                        <div className="form-group">
-                                            <input type="text" className="form-control" name="items" placeholder="No of Items" required="required"
-                                            value={formData.title}
+                                            <input type="number" className="form-control" name="instock" placeholder="No of Items" required="required"
+                                            value={formData.instock}
                                             onChange={(e)=>handleFormFields(e)}
                                              />
                                         </div>

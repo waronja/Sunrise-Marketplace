@@ -1,24 +1,45 @@
 import React, { useState } from 'react';
+import ServerSideErrors from '../Create/ServerSideErrors';
+import { useHistory } from 'react-router-dom'; 
+function Login () {
+    let history = useHistory ();
+    const[currentUser, setCurrentUser] = useState('')
+    const[isAuthenticated, setIsAuthenticated] = useState(false)
+    const [isServerSideError, setIsServerSideError] = useState(false)
+    const [error, setError] = useState([])
+    const[formData, setFormData] = useState({
+        username:'',
+        password:'',
+    })
 
-function Login (onLogin) {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const handleChange = (e) =>{
+        setFormData({...formData,[e.target.name]:e.target.value})
+    }
+
     
     function handleSubmit(e) {
         e.preventDefault();
-        fetch("/login", {
+        fetch("http://localhost:3000/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ email, password }),
-        }).then((r) => {
-            if (r.ok) {
-                r.json().then((user) => onLogin(user));
-            } else {
-                r.json().then((data) => console.log(data));
+            body: JSON.stringify(formData),
+        }).then((res) =>{
+            if(res.ok){
+                res.json().then((user)=>{
+                    setCurrentUser(user)
+                    setIsAuthenticated(true)
+                    history.push('/create')
+                })
+            }else{
+                res.json().then((errors)=>{
+                    setError(errors)
+                    setIsServerSideError(true)
+                })
             }
-        });
+        })
+        
     }
 
         return (
@@ -29,14 +50,23 @@ function Login (onLogin) {
                             <h5>Login</h5>
                             <form className="item-form card no-hover" onSubmit={handleSubmit}>
                                 <div className="row">
+                                {isServerSideError && <ServerSideErrors errors={error}/>}
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="email" className="form-control" name="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your Email" required="required" />
+                                            <input type="text" className="form-control" 
+                                            name="username" 
+                                            value={formData.username} 
+                                            onChange={(e) => handleChange(e)} 
+                                            placeholder="Enter your username" 
+                                            required="required" />
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-group mt-3">
-                                            <input type="password" className="form-control" name="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your Password" required="required" />
+                                            <input type="password" className="form-control" 
+                                            name="password" value={formData.password} 
+                                            onChange={(e) => handleChange(e)} 
+                                            placeholder="Enter your Password" required="required" />
                                         </div>
                                     </div>
                                     <div className="col-12">

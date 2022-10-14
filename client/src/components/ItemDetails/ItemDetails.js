@@ -3,45 +3,45 @@ import React, { Component } from 'react';
 const initData = {
     itemImg: "/img/auction_2.jpg",
     date: "2022-03-30",
-    tab_1: "Bids",
-    tab_2: "History",
-    tab_3: "Details",
+    // tab_1: "Bids",
+    // tab_2: "History",
+    // tab_3: "Details",
     ownerImg: "/img/avatar_1.jpg",
-    itemOwner: "Themeland",
+    itemOwner: "KInuthia",
     created: "15 Jul 2021",
-    title: "Walking On Air",
+    title: "Sufuria",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.",
-    price_1: "1.5 ETH",
-    price_2: "$500.89",
+    // price_1: "1.5 ETH",
+    price_2: "Ksh 500",
     count: "1 of 5",
     size: "14000 x 14000 px",
-    volume: "64.1",
-    highest_bid: "2.9 BNB",
-    bid_count: "1 of 5",
-    btnText: "View Details"
+    // volume: "64.1",
+    // highest_bid: "2.9 BNB",
+    // bid_count: "1 of 5",
+    btnText: "Contact Seller"
 }
 
 const tabData_1 = [
     {
         id: "1",
         img: "/img/avatar_1.jpg",
-        price: "14 ETH",
+        price: "Ksh 12,000",
         time: "4 hours ago",
-        author: "@arham"
+        author: "@Mama Shiro"
     },
     {
         id: "2",
         img: "/img/avatar_2.jpg",
-        price: "10 ETH",
+        price: "Ksh 100,000",
         time: "8 hours ago",
-        author: "@junaid"
+        author: "@Giddy"
     },
     {
         id: "3",
         img: "/img/avatar_3.jpg",
-        price: "12 ETH",
+        price: "Ksh 30,000",
         time: "3 hours ago",
-        author: "@yasmin"
+        author: "@Charles"
     }
 ]
 
@@ -49,40 +49,40 @@ const tabData_2 = [
     {
         id: "1",
         img: "/img/avatar_6.jpg",
-        price: "32 ETH",
+        price: "Ksh 50,000",
         time: "10 hours ago",
-        author: "@hasan"
+        author: "@Kinyanjui"
     },
     {
         id: "2",
         img: "/img/avatar_7.jpg",
-        price: "24 ETH",
+        price: "Ksh 20,000",
         time: "6 hours ago",
-        author: "@artnox"
+        author: "@Mama Ntilie"
     },
     {
         id: "3",
         img: "/img/avatar_8.jpg",
-        price: "29 ETH",
+        price: "Ksh 15,000",
         time: "12 hours ago",
-        author: "@meez"
+        author: "@Kinuthia"
     }
 ]
 
-const sellerData = [
-    {
-        id: "1",
-        img: "/img/avatar_1.jpg",
-        seller: "@ArtNoxStudio",
-        post: "Creator"
-    },
-    {
-        id: "2",
-        img: "/img/avatar_2.jpg",
-        seller: "Virtual Worlds",
-        post: "Collection"
-    }
-]
+// const sellerData = [
+//     {
+//         id: "1",
+//         img: "/img/avatar_1.jpg",
+//         seller: "@ArtNoxStudio",
+//         post: "Creator"
+//     },
+//     {
+//         id: "2",
+//         img: "/img/avatar_2.jpg",
+//         seller: "Virtual Worlds",
+//         post: "Collection"
+//     }
+// ]
 
 class ItemDetails extends Component {
     state = {
@@ -96,7 +96,7 @@ class ItemDetails extends Component {
             initData: initData,
             tabData_1: tabData_1,
             tabData_2: tabData_2,
-            sellerData: sellerData
+            // sellerData: sellerData
         })
     }
     render() {
@@ -135,14 +135,14 @@ class ItemDetails extends Component {
                                     <div className="tab-pane fade show active" id="nav-home">
                                         <ul className="list-unstyled">
                                             {/* Single Tab List */}
-                                            {this.state.tabData_1.map((item, idx) => {
+                                            {/* {this.state.tabData_1.map((item, idx) => {
                                                 return (
                                                     <li key={`tdo_${idx}`} className="single-tab-list d-flex align-items-center">
                                                         <img className="avatar-sm rounded-circle mr-3" src={item.img} alt="" />
                                                         <p className="m-0">Bid listed for <strong>{item.price}</strong> {item.time} <br />by <a href="/author">{item.author}</a></p>
                                                     </li>
                                                 );
-                                            })}
+                                            })} */}
                                         </ul>
                                     </div>
                                     <div className="tab-pane fade" id="nav-profile">
@@ -198,7 +198,7 @@ class ItemDetails extends Component {
                                             <span>{this.state.initData.size}</span>
                                         </li>
                                         <li>
-                                            <span>Volume Traded </span>
+                                            {/* <span>Volume Traded </span> */}
                                             <span>{this.state.initData.volume}</span>
                                         </li>
                                     </ul>
@@ -224,7 +224,7 @@ class ItemDetails extends Component {
                                     })}
                                     <div className="col-12 item px-lg-2">
                                         <div className="card no-hover">
-                                            <h4 className="mt-0 mb-2">Highest Bid</h4>
+                                            {/* <h4 className="mt-0 mb-2">Highest Bid</h4> */}
                                             <div className="price d-flex justify-content-between align-items-center">
                                                 <span>{this.state.initData.highest_bid}</span>
                                                 <span>{this.state.initData.bid_count}</span>

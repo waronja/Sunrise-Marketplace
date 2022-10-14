@@ -1,0 +1,20 @@
+.card{
+    margin-left: 10px;
+}
+
+.header{
+    margin-left: 15px !important;
+}
+
+.badge{
+    position: relative;
+}
+
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
