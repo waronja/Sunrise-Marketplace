@@ -28,7 +28,7 @@ class Hero extends Component {
                             <p>{this.state.data.content}</p>
                             {/* Buttons */}
                             <div className="button-group">
-                                <a className="btn btn-bordered-white" href="/explore-1">{this.state.data.btn_1}</a>
+                                <a className="btn btn-bordered-white" href="/auction-2">{this.state.data.btn_1}</a>
                                 <a className="btn btn-bordered-white" href="/create">{this.state.data.btn_2}</a>
                             </div>
                         </div>

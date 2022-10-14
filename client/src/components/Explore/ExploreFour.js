@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const initData = {
-    pre_heading: "Explore",
+    pre_heading: "Explore1",
     heading: "Available Items",
     content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.",
     btnText: "Load More"
