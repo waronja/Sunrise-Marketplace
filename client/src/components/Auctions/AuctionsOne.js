@@ -130,8 +130,8 @@ const AuctionsOne =()=> {
                                                             <span className="ml-2">{product.seller}</span>
                                                         </a>
                                                         <div className="card-bottom d-flex justify-content-between">
-                                                            <span>{product.price}</span>
-                                                            <span>{product.instock}</span>
+                                                            <span>kshs.{product.price}</span>
+                                                            <span>instock {product.instock}</span>
                                                         </div>
                                                     </div>
                                                 </div>
