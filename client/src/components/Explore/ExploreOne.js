@@ -2,125 +2,6 @@ import React,{useEffect, useState} from 'react';
 import { Spinner } from './spinner/Spinner';
 import Products from './products/Products';
 
-<<<<<<< HEAD
-// const initData = {
-//     pre_heading: "Exclusive Assets",
-//     heading: "Explore",
-//     btn_1: "View All",
-//     btn_2: "Load More"
-// }
-
-// const data = [
-//     {
-//         id: "1",
-//         img: "/img/auction_1.jpg",
-//         title: "Walking On Air",
-//         owner: "Richard",
-//         price: "1.5 ETH",
-//         count: "1 of 1",
-//         btnText: "View Details"
-//     },
-//     {
-//         id: "2",
-//         img: "/img/auction_2.jpg",
-//         title: "Domain Names",
-//         owner: "John Deo",
-//         price: "2.7 ETH",
-//         count: "1 of 1",
-//         btnText: "View Details"
-//     },
-//     {
-//         id: "3",
-//         img: "/img/auction_3.jpg",
-//         title: "Trading Cards",
-//         owner: "Arham",
-//         price: "2.3 ETH",
-//         count: "1 of 1",
-//         btnText: "View Details"
-//     },
-//     {
-//         id: "4",
-//         img: "/img/auction_4.jpg",
-//         title: "Industrial Revolution",
-//         owner: "Yasmin",
-//         price: "1.8 ETH",
-//         count: "1 of 1",
-//         btnText: "View Details"
-//     },
-//     {
-//         id: "5",
-//         img: "/img/auction_5.jpg",
-//         title: "Utility",
-//         owner: "Junaid",
-//         price: "1.7 ETH",
-//         count: "1 of 1",
-//         btnText: "View Details"
-//     },
-//     {
-//         id: "6",
-//         img: "/img/auction_6.jpg",
-//         title: "Sports",
-//         owner: "ArtNox",
-//         price: "1.9 ETH",
-//         count: "1 of 1",
-//         btnText: "View Details"
-//     },
-//     {
-//         id: "7",
-//         img: "/img/auction_7.jpg",
-//         title: "Cartoon Heroes",
-//         owner: "Junaid",
-//         price: "3.2 ETH",
-//         count: "1 of 1",
-//         btnText: "View Details"
-//     },
-//     {
-//         id: "8",
-//         img: "/img/auction_8.jpg",
-//         title: "Gaming Chair",
-//         owner: "Johnson",
-//         price: "0.69 ETH",
-//         count: "1 of 1",
-//         btnText: "View Details"
-//     },
-//     {
-//         id: "9",
-//         img: "/img/auction_9.jpg",
-//         title: "Photography",
-//         owner: "Sara",
-//         price: "2.3 ETH",
-//         count: "1 of 1",
-//         btnText: "View Details"
-//     },
-//     {
-//         id: "10",
-//         img: "/img/auction_10.jpg",
-//         title: "Zed Run",
-//         owner: "SpaceMan",
-//         price: "3.7 ETH",
-//         count: "1 of 1",
-//         btnText: "View Details"
-//     },
-//     {
-//         id: "11",
-//         img: "/img/auction_11.jpg",
-//         title: "Rare Tyres",
-//         owner: "Monas",
-//         price: "2.2 ETH",
-//         count: "1 of 1",
-//         btnText: "View Details"
-//     },
-//     {
-//         id: "12",
-//         img: "/img/auction_12.jpg",
-//         title: "World of Women",
-//         owner: "Victor",
-//         price: "4.3 ETH",
-//         count: "1 of 1",
-//         btnText: "View Details"
-//     }
-// ]
-=======
 const initData = {
     pre_heading: "Available Items",
     heading: "Explore",
@@ -238,7 +119,6 @@ const data = [
         btnText: "View Details"
     }
 ]
->>>>>>> 1dbd9b12ed815b49bf36424698cd4a2b67ab2247
 
 const ExploreOne =()=> {
     const[products, setProducts] = useState([])
