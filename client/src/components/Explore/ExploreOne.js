@@ -2,6 +2,126 @@ import React,{useEffect, useState} from 'react';
 import { Spinner } from './spinner/Spinner';
 import Products from './products/Products';
 
+<<<<<<< HEAD
+=======
+const initData = {
+    pre_heading: "Available Items",
+    heading: "Explore",
+    btn_1: "View All",
+    btn_2: "Load More"
+}
+
+const data = [
+    {
+        id: "1",
+        img: "/img/auction_1.jpg",
+        title: "Wheel-barrow",
+        owner: "KInuthia",
+        price: "Ksh 5,000",
+        count: "1 of 1",
+        btnText: "View Details"
+    },
+    {
+        id: "2",
+        img: "/img/auction_2.jpg",
+        title: "Sufuria",
+        owner: "Mama Ntilie",
+        price: "Ksh 500",
+        count: "1 of 1",
+        btnText: "View Details"
+    },
+    {
+        id: "3",
+        img: "/img/auction_3.jpg",
+        title: "Bar set",
+        owner: "Abraham",
+        price: "Ksh 15,000",
+        count: "1 of 1",
+        btnText: "View Details"
+    },
+    {
+        id: "4",
+        img: "/img/auction_4.jpg",
+        title: "Tandoori oven",
+        owner: "Charles",
+        price: "Ksh 6,000",
+        count: "1 of 1",
+        btnText: "View Details"
+    },
+    {
+        id: "5",
+        img: "/img/auction_5.jpg",
+        title: "Frying pan",
+        owner: "Ahmed",
+        price: "Ksh 250",
+        count: "1 of 1",
+        btnText: "View Details"
+    },
+    {
+        id: "6",
+        img: "/img/auction_6.jpg",
+        title: "Chips Displayer",
+        owner: "Mama Shiro",
+        price: "Ksh 7,000",
+        count: "1 of 1",
+        btnText: "View Details"
+    },
+    {
+        id: "7",
+        img: "/img/auction_7.jpg",
+        title: "Meat Mincer",
+        owner: "Kinyanjui",
+        price: "Ksh 3,000",
+        count: "1 of 1",
+        btnText: "View Details"
+    },
+    {
+        id: "8",
+        img: "/img/auction_8.jpg",
+        title: "Cooker",
+        owner: "Mhindi",
+        price: "Ksh 30,999",
+        count: "1 of 1",
+        btnText: "View Details"
+    },
+    {
+        id: "9",
+        img: "/img/auction_9.jpg",
+        title: "Chips Cutter",
+        owner: "Sara",
+        price: "Ksh 6,000",
+        count: "1 of 1",
+        btnText: "View Details"
+    },
+    {
+        id: "10",
+        img: "/img/auction_10.jpg",
+        title: "General Displayer",
+        owner: "Kinuthia",
+        price: "Ksh 80,000",
+        count: "1 of 1",
+        btnText: "View Details"
+    },
+    {
+        id: "11",
+        img: "/img/auction_11.jpg",
+        title: "Trimmer",
+        owner: "Giddy",
+        price: "Ksh 10,000",
+        count: "1 of 1",
+        btnText: "View Details"
+    },
+    {
+        id: "12",
+        img: "/img/auction_12.jpg",
+        title: "Mkokoteni",
+        owner: "Victor",
+        price: "Ksh 2,500",
+        count: "1 of 1",
+        btnText: "View Details"
+    }
+]
+>>>>>>> 9bf53bdcc10a553a9e0d4781e87006a566d7e74d
 
 const ExploreOne =()=> {
     const[products, setProducts] = useState([])
