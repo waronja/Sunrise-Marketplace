@@ -61,7 +61,7 @@ import React, { useState } from 'react';
                                         </div>
                                     </div>
                                     <div className="col-12">
-                                        <button className="btn w-100 mt-3 mt-sm-4" type="submit">Sign Up</button>
+                                        <a className="btn w-100 mt-3 mt-sm-4" type='submit' href="/login">Sign In</a>
                                     </div>
                                     <div className="col-12">
                                         <span className="d-block text-center mt-4">Already have an account? <a href="/login">Login</a></span>

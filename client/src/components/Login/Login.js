@@ -48,7 +48,7 @@ function Login (onLogin) {
                                         </div>
                                     </div>
                                     <div className="col-12">
-                                        <button className="btn w-100 mt-3 mt-sm-4" type="submit">Sign In</button>
+                                        <a className="btn w-100 mt-3 mt-sm-4" type='submit' href="/create">LogIn</a>
                                     </div>
                                     <div className="col-12">
                                         <hr />
