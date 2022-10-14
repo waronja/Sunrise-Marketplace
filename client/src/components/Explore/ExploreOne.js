@@ -125,7 +125,7 @@ const ExploreOne =()=> {
     const[loading, setLoading] = useState(false)
 
     const fetchProducts = () =>{
-        fetch('http://localhost:3000/products')
+        fetch('http://localhost:3000/items')
         .then((response)=>response.json())
         .then((data)=>{
             setLoading(true)
