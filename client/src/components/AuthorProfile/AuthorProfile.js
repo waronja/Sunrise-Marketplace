@@ -24,7 +24,6 @@ class AuthorProfile extends Component {
             <div className="card no-hover text-center">
                 <div className="image-over">
                 <img className="rounded-circle" src={this.state.data.authorImg} alt="" />
-                    {/* <img className="card-img-top" src={this.state.data.img} alt="" /> */}
                     {/* Author */}
                     <div className="author">
                         <div className="author-thumb avatar-lg">
@@ -39,22 +38,10 @@ class AuthorProfile extends Component {
                         <h5 className="mb-3">{this.state.data.author}</h5>
                         <p className="my-3">{this.state.data.content}</p>
                         <div className="input-group">
-                            {/* <input type="text" className="form-control" placeholder={this.state.data.authorId} /> */}
                             <div className="input-group-append">
                                 <button><i className="icon-docs" /></button>
                             </div>
                         </div>
-                        {/* Social Icons */}
-                        {/* <div className="social-icons d-flex justify-content-center my-3">
-                            {this.state.socialData.map((item, idx) => {
-                                return (
-                                    <a key={`asd_${idx}`} className={item.link} href="#">
-                                        <i className={item.icon} />
-                                        <i className={item.icon} />
-                                    </a>
-                                );
-                            })}
-                        </div> */}
                         <a className="btn btn-bordered-white btn-smaller" href="#">{this.state.data.btnText}</a>
                     </div>
                 </div>
