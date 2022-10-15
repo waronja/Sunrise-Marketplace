@@ -2,8 +2,6 @@ import React,{useEffect, useState} from 'react';
 import { Spinner } from './spinner/Spinner';
 import Products from './products/Products';
 
-<<<<<<< HEAD
-=======
 const initData = {
     pre_heading: "Available Items",
     heading: "Explore",
@@ -121,7 +119,6 @@ const data = [
         btnText: "View Details"
     }
 ]
->>>>>>> 9bf53bdcc10a553a9e0d4781e87006a566d7e74d
 
 const ExploreOne =()=> {
     const[products, setProducts] = useState([])

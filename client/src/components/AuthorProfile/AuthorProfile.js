@@ -26,11 +26,11 @@ class AuthorProfile extends Component {
                 <img className="rounded-circle" src={this.state.data.authorImg} alt="" />
                     {/* <img className="card-img-top" src={this.state.data.img} alt="" /> */}
                     {/* Author */}
-                    <div className="author">
+                    {/* <div className="author">
                         <div className="author-thumb avatar-lg">
                             <img className="rounded-circle" src={this.state.data.authorImg} alt="" />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 {/* Card Caption */}
                 <div className="card-caption col-12 p-0">
