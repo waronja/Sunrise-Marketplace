@@ -63,6 +63,11 @@ Rails.application.configure do
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 
+  
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+end
+
+group :production do
+  gem 'pg', '~> 1.4', '>= 1.4.3'
 end

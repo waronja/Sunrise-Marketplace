@@ -20,6 +20,7 @@ gem "rack-cors"
 gem 'active_model_serializers'
 gem 'activestorage'
 gem  "bcrypt"
+gem 'pg'
 
 gem "image_processing"
 
