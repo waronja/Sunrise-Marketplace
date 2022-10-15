@@ -10,7 +10,7 @@ const initData = {
     itemOwner: "KInuthia",
     created: "15 Jul 2021",
     title: "Sufuria",
-    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit.",
+    content: "Made of Aluminium and is durable.",
     // price_1: "1.5 ETH",
     price_2: "Ksh 500",
     count: "1 of 5",
