@@ -15,10 +15,10 @@ Buyer can view items and contact seller.
 ## GitHub-Repo-Link
 https://github.com/waronja/Sunrise-Marketplace
 
-### Technology-Used
+## Technology-Used
 HTML - Was used as a template to hold the React components of the app via the root div. CSS styling-which was used to style the User Interface. JS - Java Script is used to make the website interactive. JSX- JavaScript XML allows us to write HTML elements in JavaScript and place them in the DOM .JSX converts HTML tags into react elements. Ruby on Rails- used to create a back-end API. SQLite - used to create a database. PostgreSQL - used to create a database(for the purposes of heroku deployment). Heroku - Heroku used host our app online .
 
-### Known-Bugs
+## Known-Bugs
 The project works correctly and interactively.
 
 ### License
